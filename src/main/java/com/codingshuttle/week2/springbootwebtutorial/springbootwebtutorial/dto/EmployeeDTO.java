@@ -21,7 +21,7 @@ public class EmployeeDTO {
     private String name;
 
     @Email(message = "Email should be a valid email")
-   // @Pattern(regexp = "^[(a-z0-9-\\_\\.!\\a-z0-9\\D)]+@[(a-zA-Z)]+\\.[(a-zA-Z)]{2,3}$")
+    @Pattern(regexp = "^[(a-z0-9-\\_\\.!\\a-z0-9\\D)]+@[(a-zA-Z)]+\\.[(a-zA-Z)]{2,3}$")
     private String email;
 
     @NotNull(message = "Salary of Employee should be not null")
@@ -37,7 +37,7 @@ public class EmployeeDTO {
     private Integer age;
 
     @NotBlank(message ="Role of the employee cannot be blank")
-  //@Pattern(regexp ="^(ADMIN|USER)$",message = "Role of employee can be user or admin")
+    @Pattern(regexp ="^(ADMIN|USER)$",message = "Role of employee can be user or admin")
     @EmployeeRoleValidation
     private String role; //ADMIN or USER
 
